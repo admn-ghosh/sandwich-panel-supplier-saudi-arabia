@@ -1,6 +1,8 @@
+
 import React, { useState } from 'react';
 import { CITY_OPTIONS, PANEL_OPTIONS } from '../constants';
 import { FormData } from '../types';
+import { collection, addDoc } from 'firebase/firestore';
 import { db, serverTimestamp } from '../firebase-config';
 
 const Hero: React.FC = () => {
@@ -28,7 +30,8 @@ const Hero: React.FC = () => {
     
     try {
       if (db) {
-        await db.collection("ksa-leads").add({
+        // Use modular addDoc and collection
+        await addDoc(collection(db, "ksa-leads"), {
           ...formData,
           submittedAt: serverTimestamp(),
           language: 'English',
@@ -67,7 +70,7 @@ const Hero: React.FC = () => {
       
     } catch (error) {
       console.error('Error saving lead:', error);
-      alert('There was an error submitting your request.');
+      alert('There was an error submitting your request. Please try again.');
       setIsSubmitting(false);
     }
   };
