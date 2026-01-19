@@ -31,11 +31,12 @@ const Hero: React.FC = () => {
       if (db) {
         // Writing to the 'mail' collection to trigger the Firebase Email extension
         await addDoc(collection(db, "mail"), {
-          // Extension Fields (Recipients as arrays)
+          // Extension Fields
+          from: 'admin@ghoshgroups.com',
           to: ['parimal@ghoshgroups.com'],
           cc: ['admin@ghoshgroups.com'],
           message: {
-            subject: `New KSA Website Lead: ${formData.companyName}`,
+            subject: 'New Lead from KSA Landing Page',
             html: `
               <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
                 <h2 style="color: #064e3b;">New Lead from KSA Landing Page</h2>
@@ -52,14 +53,16 @@ const Hero: React.FC = () => {
               </div>
             `
           },
-          // Original Data Fields preserved for records
-          fullName: formData.fullName,
-          companyName: formData.companyName,
-          leadEmail: formData.email,
-          mobile: formData.mobile,
-          projectCity: formData.projectCity,
-          panelType: formData.panelType,
-          areaQuantity: formData.areaQuantity,
+          // Record Data
+          leadData: {
+            fullName: formData.fullName,
+            companyName: formData.companyName,
+            email: formData.email,
+            mobile: formData.mobile,
+            projectCity: formData.projectCity,
+            panelType: formData.panelType,
+            areaQuantity: formData.areaQuantity
+          },
           submittedAt: serverTimestamp(),
           language: 'English',
           source: window.location.hostname
