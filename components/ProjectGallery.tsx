@@ -75,8 +75,8 @@ const ProjectGallery: React.FC = () => {
                   width="1024"
                   height="576"
                   loading={index === 0 ? "eager" : "lazy"}
-                  // @ts-ignore
-                  fetchpriority={index === 0 ? "high" : "auto"}
+                  // Fix: fetchpriority -> fetchPriority
+                  fetchPriority={index === 0 ? "high" : "auto"}
                   decoding="async"
                 />
                 
