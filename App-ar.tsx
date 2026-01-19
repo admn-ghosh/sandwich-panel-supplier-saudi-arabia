@@ -31,4 +31,5 @@ function AppAr() {
   );
 }
 
+// Fix: missing default export for index-ar.tsx
 export default AppAr;
