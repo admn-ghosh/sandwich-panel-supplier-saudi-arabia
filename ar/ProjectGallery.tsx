@@ -29,8 +29,8 @@ const ProjectGalleryAr: React.FC = () => {
                   width="1024"
                   height="576"
                   loading={index === 0 ? "eager" : "lazy"}
-                  // @ts-ignore
-                  fetchpriority={index === 0 ? "high" : "auto"}
+                  // Fix: fetchpriority -> fetchPriority
+                  fetchPriority={index === 0 ? "high" : "auto"}
                   decoding="async"
                 />
                 <div className="absolute bottom-0 right-0 w-full bg-gradient-to-t from-black/80 p-6 text-white text-right">
