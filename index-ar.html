@@ -20,28 +20,6 @@
     <link rel="preload" href="https://ghoshgroups.com/lp/logo.png" as="image" fetchpriority="high">
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Tajawal:wght@400;500;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Tajawal:wght@400;500;700&display=swap"></noscript>
-    <!-- Tailwind CSS CDN -->
-    <script defer src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              emerald: {
-                50: '#ecfdf5',
-                100: '#d1fae5',
-                200: '#a7f3d0',
-                700: '#047857',
-                800: '#065f46',
-                900: '#064e3b',
-                950: '#022c22',
-              }
-            }
-          }
-        }
-      }
-    </script>
-
     <!-- Google tag (gtag.js) -->
         <script async defer src="https://www.googletagmanager.com/gtag/js?id=G-9D1555KPF2"></script>
     <script>
@@ -74,5 +52,27 @@
   </head>
   <body class="bg-stone-50 text-stone-900 antialiased">
     <div id="root"></div>
+
+        <!-- Tailwind CSS CDN (Moved to end of body to avoid blocking render) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              emerald: {
+                50: '#ecfdf5',
+                100: '#d1fae5',
+                200: '#a7f3d0',
+                700: '#047857',
+                800: '#065f46',
+                900: '#064e3b',
+                950: '#022c22',
+              }
+            }
+          }
+        }
+      }
+    </script>
   </body>
 </html>
