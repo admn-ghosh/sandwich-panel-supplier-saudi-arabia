@@ -5,20 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta name="theme-color" content="#059669" />
     
-    <!-- Critical CSS: Hand-tuned to ensure the page structure draws instantly -->
+    <!-- Critical CSS: Renders structure instantly before scripts load -->
     <style>
       :root{--emerald-900:#064e3b;--emerald-950:#022c22;--stone-50:#fafaf9}
       body{margin:0;font-family:system-ui,-apple-system,sans-serif;background-color:var(--stone-50);color:#1c1917;overflow-x:hidden}
-      .loading-placeholder{background:#e5e7eb;animation:pulse 2s infinite}@keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
+      header{background:#064e3b;height:80px;width:100%}
+      .hero-text-critical{font-size:24px;font-weight:700;color:#022c22;line-height:1.2}
     </style>
 
-    <!-- CRITICAL FOR 90+ SCORE: Preload LCP Images before JS loads -->
+    <!-- Preload LCP Images (The browser downloads these before JS) -->
     <link rel="preload" href="https://ghoshgroups.com/lp/logo.png" as="image" fetchpriority="high">
     <link rel="preload" href="https://ghoshgroups.com/lp/saudi-arabia-sandwich-roof-panel-10cm.jpg" as="image" fetchpriority="high">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Tajawal:wght@400;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 
     <title>Leading Sandwich Panels Supplier in Saudi Arabia | Ghosh Group</title>
     <meta name="description" content="DCD-approved leading sandwich panels supplier in Saudi Arabia. PUR, PIR & Rockwool roof/wall panels for NEOM, Riyadh, Jeddah. Fast KSA delivery." />
@@ -44,7 +45,6 @@
   <body>
     <div id="root"></div>
 
-    <!-- Non-critical analytics moved below content -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-9D1555KPF2"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -53,12 +53,13 @@
       gtag('config', 'G-9D1555KPF2');
     </script>
 
-    <!-- Heavy scripts moved to bottom to prevent render-blocking -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com" defer></script>
     <script>
-      tailwind.config = {
-        theme: { extend: { colors: { emerald: { 900: '#064e3b', 950: '#022c22' } } } }
-      }
+      window.addEventListener('DOMContentLoaded', () => {
+        tailwind.config = {
+          theme: { extend: { colors: { emerald: { 900: '#064e3b', 950: '#022c22' } } } }
+        }
+      });
     </script>
     <script type="module" src="./index.tsx"></script>
   </body>
