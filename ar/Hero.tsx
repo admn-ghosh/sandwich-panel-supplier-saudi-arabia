@@ -87,11 +87,11 @@ const HeroAr: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row-reverse gap-12 items-start text-right">
           <div className="lg:w-1/2 pt-4">
-            <h1 className="text-3xl md:text-4xl lg:text-[40px] font-bold text-emerald-950 leading-tight mb-6">
-              مورد الألواح العازلة الرائد في السعودية لمشاريع نيوم والرياض وجدة
+            <h1 className="text-2xl md:text-3xl lg:text-[34px] font-bold text-emerald-950 leading-tight mb-6">
+              تعد مجموعة غوش المورد الرئيسي للألواح العازلة (ساندوتش بانل) في المملكة العربية السعودية، حيث تدعم المقاولين والاستشاريين في نيوم والرياض وجدة وما وراءها. وهي مصنع رائد للألواح معتمد من الدفاع المدني (DCD) في دبي.
             </h1>
             <p className="text-lg md:text-xl text-stone-700 mb-6 leading-relaxed">
-              تعتبر مجموعة غوش مُصنعاً معتمداً من الدفاع المدني والمورد الرئيسي للألواح العازلة في المملكة العربية السعودية، حيث ندعم المقاولين والاستشاريين وأصحاب المشاريع في نيوم والرياض وجدة والدمام والخبر ومكة والمدينة.
+              نحن نوفر حلول تصنيع معتمدة، وندعم مشاريع البنية التحتية بألواح عازلة عالية الجودة من نوع PIR و PUR والصوف الصخري يتم توريدها في جميع أنحاء المملكة.
             </p>
             <div className="bg-emerald-50 border-r-4 border-emerald-700 p-6 mb-8">
               <p className="font-semibold text-emerald-900 text-base md:text-lg">
