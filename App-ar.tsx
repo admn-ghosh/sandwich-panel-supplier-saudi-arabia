@@ -1,12 +1,12 @@
 import React, { Suspense, lazy } from 'react';
+import TopStripAr from './ar/TopStrip';
+import HeroAr from './ar/Hero';
+import ProjectGalleryAr from './ar/ProjectGallery';
 
-const TopStripAr = lazy(() => import('./ar/TopStrip'));
-const HeroAr = lazy(() => import('./ar/Hero'));
 const FeaturesAr = lazy(() => import('./ar/Features'));
 const CertificationsAr = lazy(() => import('./ar/Certifications'));
 const ProductSectionAr = lazy(() => import('./ar/ProductSection'));
 const ProjectsDeliveryAr = lazy(() => import('./ar/ProjectsDelivery'));
-const ProjectGalleryAr = lazy(() => import('./ar/ProjectGallery'));
 const TestimonialsAr = lazy(() => import('./ar/Testimonials'));
 const FAQAr = lazy(() => import('./ar/FAQ'));
 const FooterAr = lazy(() => import('./ar/Footer'));
@@ -20,22 +20,22 @@ const SectionLoader = () => (
 
 function AppAr() {
   return (
-    <div className="min-h-screen bg-stone-50 font-sans" dir="rtl">
-      <Suspense fallback={<SectionLoader />}>
-        <TopStripAr />
-        <main>
-          <HeroAr />
+    <div className="min-h-screen bg-stone-50 font-sans" dir="rtl" style={{ fontFamily: '"Tajawal", sans-serif' }}>
+      <TopStripAr />
+      <main>
+        <HeroAr />
+        <ProjectGalleryAr />
+        <Suspense fallback={<SectionLoader />}>
           <FeaturesAr />
-          <ProjectGalleryAr />
           <CertificationsAr />
           <ProductSectionAr />
           <ProjectsDeliveryAr />
           <TestimonialsAr />
           <FAQAr />
-        </main>
-        <FooterAr />
-        <StickyCTAAr />
-      </Suspense>
+        </Suspense>
+      </main>
+      <FooterAr />
+      <StickyCTAAr />
     </div>
   );
 }
