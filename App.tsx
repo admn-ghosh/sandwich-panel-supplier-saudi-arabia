@@ -1,14 +1,12 @@
 import React, { useState, useEffect, Suspense, lazy } from 'react';
 import TopStrip from './components/TopStrip';
 import Hero from './components/Hero';
-import ProjectGallery from './components/ProjectGallery'; // Direct import for LCP optimization
+import ProjectGallery from './components/ProjectGallery';
 import Footer from './components/Footer';
 import StickyCTA from './components/StickyCTA';
 
-// Arabic Gallery also imported directly to ensure speed when switching
 import ProjectGalleryAr from './ar/ProjectGallery';
 
-// Lazy load components below the fold
 const Features = lazy(() => import('./components/Features'));
 const Certifications = lazy(() => import('./components/Certifications'));
 const ProductSection = lazy(() => import('./components/ProductSection'));
@@ -16,7 +14,6 @@ const ProjectsDelivery = lazy(() => import('./components/ProjectsDelivery'));
 const Testimonials = lazy(() => import('./components/Testimonials'));
 const FAQ = lazy(() => import('./components/FAQ'));
 
-// Arabic Components - Lazy loaded
 const TopStripAr = lazy(() => import('./ar/TopStrip'));
 const HeroAr = lazy(() => import('./ar/Hero'));
 const FeaturesAr = lazy(() => import('./ar/Features'));
@@ -28,7 +25,6 @@ const FAQAr = lazy(() => import('./ar/FAQ'));
 const FooterAr = lazy(() => import('./ar/Footer'));
 const StickyCTAAr = lazy(() => import('./ar/StickyCTA'));
 
-// Loading component for Suspense
 const SectionLoader = () => (
   <div className="py-20 flex justify-center items-center bg-stone-50">
     <div className="w-8 h-8 border-4 border-emerald-200 border-t-emerald-700 rounded-full animate-spin"></div>
@@ -55,15 +51,10 @@ function App({ initialLanguage = 'en' }: AppProps) {
 
     try {
       const url = new URL(window.location.href);
-      if (lang === 'ar') {
-        url.searchParams.set('lang', 'ar');
-      } else {
-        url.searchParams.delete('lang');
-      }
+      if (lang === 'ar') url.searchParams.set('lang', 'ar');
+      else url.searchParams.delete('lang');
       window.history.pushState({}, '', url.toString());
-    } catch (e) {
-      console.warn("Could not update URL state:", e);
-    }
+    } catch (e) {}
     
     setIsLoaded(true);
   }, [lang]);
@@ -73,7 +64,7 @@ function App({ initialLanguage = 'en' }: AppProps) {
     window.scrollTo({ top: 0, behavior: 'instant' });
   };
 
-  if (!isLoaded) return <div className="min-h-screen bg-stone-50" />;
+  if (!isLoaded) return null;
 
   if (lang === 'ar') {
     return (
@@ -102,7 +93,7 @@ function App({ initialLanguage = 'en' }: AppProps) {
       <TopStrip onLanguageSwitch={toggleLanguage} />
       <main>
         <Hero />
-        <ProjectGallery /> {/* Optimized position */}
+        <ProjectGallery />
         <Suspense fallback={<SectionLoader />}>
           <Features />
           <Certifications />
