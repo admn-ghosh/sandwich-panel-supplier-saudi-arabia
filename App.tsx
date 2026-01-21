@@ -1,16 +1,15 @@
 import React, { useState, useEffect, Suspense, lazy } from 'react';
 import TopStrip from './components/TopStrip';
-import Hero from './components/Hero'; // Direct import for performance
-import ProjectGallery from './components/ProjectGallery'; // Direct import for performance
+import Hero from './components/Hero'; 
+import ProjectGallery from './components/ProjectGallery'; 
 import Footer from './components/Footer';
 import StickyCTA from './components/StickyCTA';
 
-// Import Arabic versions for high-speed switching
-import TopStripAr from './ar/TopStrip';
-import HeroAr from './ar/Hero';
-import ProjectGalleryAr from './ar/ProjectGallery';
+// Lazy load Arabic versions to prevent loading both languages on mobile start
+const TopStripAr = lazy(() => import('./ar/TopStrip'));
+const HeroAr = lazy(() => import('./ar/Hero'));
+const ProjectGalleryAr = lazy(() => import('./ar/ProjectGallery'));
 
-// Lazy load only non-critical components deep below the fold
 const Features = lazy(() => import('./components/Features'));
 const Certifications = lazy(() => import('./components/Certifications'));
 const ProductSection = lazy(() => import('./components/ProductSection'));
@@ -71,21 +70,21 @@ function App({ initialLanguage = 'en' }: AppProps) {
   if (lang === 'ar') {
     return (
       <div className="min-h-screen bg-stone-50 font-sans" dir="rtl" style={{ fontFamily: '"Tajawal", sans-serif' }}>
-        <TopStripAr onLanguageSwitch={toggleLanguage} />
-        <main>
-          <HeroAr />
-          <ProjectGalleryAr />
-          <Suspense fallback={<SectionLoader />}>
+        <Suspense fallback={<SectionLoader />}>
+          <TopStripAr onLanguageSwitch={toggleLanguage} />
+          <main>
+            <HeroAr />
+            <ProjectGalleryAr />
             <FeaturesAr />
             <CertificationsAr />
             <ProductSectionAr />
             <ProjectsDeliveryAr />
             <TestimonialsAr />
             <FAQAr />
-          </Suspense>
-        </main>
-        <FooterAr />
-        <StickyCTAAr />
+          </main>
+          <FooterAr />
+          <StickyCTAAr />
+        </Suspense>
       </div>
     );
   }
