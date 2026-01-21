@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
         <div className="space-y-6 mb-8">
           <p>
             <span className="block text-emerald-400 text-sm md:text-base uppercase mb-1 font-semibold">WhatsApp & Calls</span>
-            <a href="https://wa.me/971503034002" className="text-2xl md:text-3xl text-white font-bold hover:text-amber-400 transition-colors">+971 50 303 4002</a>
+            <a href="https://wa.me/971503034002" className="text-2xl md:text-3xl text-white font-bold hover:text-amber-400 transition-colors tracking-tight">+971 50 303 4002</a>
           </p>
           
           <p>
@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
         <p className="max-w-xl mx-auto text-sm md:text-base text-emerald-300 border-t border-emerald-900 pt-8 mt-8">
           Supply to: NEOM, Riyadh, Jeddah, Dammam, Al Khobar and other Saudi cities
         </p>
-        <div className="mt-4 text-sm text-emerald-400 font-medium">
+        <div className="mt-4 text-sm text-emerald-400 font-bold">
            &copy; {new Date().getFullYear()} Ghosh Group. All rights reserved.
         </div>
       </div>
