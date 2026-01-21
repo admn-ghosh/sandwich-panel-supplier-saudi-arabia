@@ -4,77 +4,48 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta name="theme-color" content="#059669" />
-    <meta name="robots" content="index, follow" />
+    
+    <style>
+      :root{--emerald-900:#064e3b;--emerald-950:#022c22;--stone-50:#fafaf9}
+      body{margin:0;font-family:'Tajawal',system-ui,-apple-system,sans-serif;background-color:var(--stone-50);color:#1c1917;direction:rtl;text-align:right}
+      .critical-nav{height:80px;background:#064e3b;display:flex;align-items:center;justify-content:space-between;padding:0 20px}
+      .critical-hero{padding:40px 20px;background:linear-gradient(to bottom, #fafaf9, #f5f5f4)}
+    </style>
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="https://ghoshgroups.com/lp/ghosh-fav-icon.png" />
-    <link rel="apple-touch-icon" href="https://ghoshgroups.com/lp/ghosh-fav-icon.png" />
-
-    <!-- Resource Hints -->
-    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
-    <link rel="dns-prefetch" href="https://firestore.googleapis.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://ghoshgroups.com">
-
-    <!-- Preloads for LCP (Logo and first Gallery Image) -->
     <link rel="preload" href="https://ghoshgroups.com/lp/logo.png" as="image" fetchpriority="high">
     <link rel="preload" href="https://ghoshgroups.com/lp/saudi-arabia-sandwich-roof-panel-10cm.jpg" as="image" fetchpriority="high">
     
-    <!-- Optimized Font Loading -->
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Tajawal:wght@400;500;700&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Tajawal:wght@400;500;700&display=swap" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Tajawal:wght@400;500;700&display=swap"></noscript>
-
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9D1555KPF2"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-9D1555KPF2');
-    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 
     <title>مورد رائد للألواح العازلة في السعودية | مجموعة غوش</title>
-    <meta name="description" content="مجموعة غوش هي المورد الرائد للألواح العازلة (ساندوتش بانل) المعتمدة من الدفاع المدني في السعودية. حلول PIR و PUR و Rockwool لمشاريع نيوم والرياض." />
-
-    <link rel="canonical" href="https://admn-ghosh.github.io/sandwich-panel-supplier-saudi-arabia/index-ar.html" />
-
+    
     <script type="importmap">
-{
-  "imports": {
-    "react": "https://esm.sh/react@19.0.0",
-    "react-dom": "https://esm.sh/react-dom@19.0.0",
-    "react-dom/client": "https://esm.sh/react-dom@19.0.0/client",
-    "lucide-react": "https://esm.sh/lucide-react@0.462.0",
-    "firebase/app": "https://esm.sh/firebase@11.1.0/app",
-    "firebase/firestore": "https://esm.sh/firebase@11.1.0/firestore"
-  }
-}
-</script>
+    {
+      "imports": {
+        "react": "https://esm.sh/react@19.0.0",
+        "react-dom": "https://esm.sh/react-dom@19.0.0",
+        "react-dom/client": "https://esm.sh/react-dom@19.0.0/client",
+        "lucide-react": "https://esm.sh/lucide-react@0.462.0",
+        "firebase/app": "https://esm.sh/firebase@11.1.0/app",
+        "firebase/firestore": "https://esm.sh/firebase@11.1.0/firestore"
+      }
+    }
+    </script>
   </head>
-  <body class="bg-stone-50 text-stone-900 antialiased">
-    <div id="root"></div>
+  <body>
+    <div id="root">
+      <div class="critical-nav">
+        <div style="width:120px;height:40px;background:rgba(255,255,255,0.1);border-radius:4px"></div>
+        <div style="width:100px;height:30px;background:rgba(255,255,255,0.1);border-radius:20px"></div>
+      </div>
+    </div>
 
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              emerald: {
-                50: '#ecfdf5',
-                100: '#d1fae5',
-                200: '#a7f3d0',
-                700: '#047857',
-                800: '#065f46',
-                900: '#064e3b',
-                950: '#022c22',
-              }
-            }
-          }
-        }
+        theme: { extend: { colors: { emerald: { 900: '#064e3b', 950: '#022c22' } } } }
       }
     </script>
     <script type="module" src="./index-ar.tsx"></script>
