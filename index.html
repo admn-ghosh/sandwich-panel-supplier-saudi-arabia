@@ -5,21 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta name="theme-color" content="#059669" />
     
-    <!-- Critical CSS: Hand-optimized for immediate paint -->
+    <!-- Critical CSS: Hand-tuned to ensure the page structure draws instantly -->
     <style>
       :root{--emerald-900:#064e3b;--emerald-950:#022c22;--stone-50:#fafaf9}
       body{margin:0;font-family:system-ui,-apple-system,sans-serif;background-color:var(--stone-50);color:#1c1917;overflow-x:hidden}
-      .critical-nav{height:80px;background:#064e3b;display:flex;align-items:center;justify-content:space-between;padding:0 20px}
-      .critical-hero{padding:40px 20px;background:linear-gradient(to bottom, #fafaf9, #f5f5f4)}
-      .animate-pulse-slow{animation:pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite}
-      @keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
+      .loading-placeholder{background:#e5e7eb;animation:pulse 2s infinite}@keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
     </style>
 
-    <!-- Preloads for LCP (The first image the user sees) -->
+    <!-- CRITICAL FOR 90+ SCORE: Preload LCP Images before JS loads -->
     <link rel="preload" href="https://ghoshgroups.com/lp/logo.png" as="image" fetchpriority="high">
     <link rel="preload" href="https://ghoshgroups.com/lp/saudi-arabia-sandwich-roof-panel-10cm.jpg" as="image" fetchpriority="high">
     
-    <!-- Deferred Font Loading -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
@@ -28,15 +24,6 @@
     <meta name="description" content="DCD-approved leading sandwich panels supplier in Saudi Arabia. PUR, PIR & Rockwool roof/wall panels for NEOM, Riyadh, Jeddah. Fast KSA delivery." />
     
 
-
-    <!-- Google tag (Deferred) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9D1555KPF2"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-9D1555KPF2');
-    </script>
     <script type="importmap">
 {
   "imports": {
@@ -47,9 +34,9 @@
     "firebase/app": "https://esm.sh/firebase@11.1.0/app",
     "firebase/firestore": "https://esm.sh/firebase@11.1.0/firestore",
     "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
     "firebase/": "https://esm.sh/firebase@^12.8.0/",
     "vite": "https://esm.sh/vite@^7.3.1",
-    "react/": "https://esm.sh/react@^19.2.3/",
     "path": "https://esm.sh/path@^0.12.7"
   }
 }
@@ -60,20 +47,18 @@
     <link rel="stylesheet" crossorigin href="./assets/index-CudWryKK.css">
   </head>
   <body>
-    <div id="root">
-      <!-- Skeleton UI for instant perceived performance -->
-      <div class="critical-nav">
-        <div style="width:120px;height:40px;background:rgba(255,255,255,0.1);border-radius:4px"></div>
-        <div style="width:100px;height:30px;background:rgba(255,255,255,0.1);border-radius:20px"></div>
-      </div>
-      <div class="critical-hero animate-pulse-slow">
-        <div style="height:40px;background:#e5e7eb;width:80%;margin-bottom:20px;border-radius:4px"></div>
-        <div style="height:20px;background:#e5e7eb;width:60%;margin-bottom:40px;border-radius:4px"></div>
-        <div style="height:400px;background:#f3f4f6;border-radius:8px"></div>
-      </div>
-    </div>
+    <div id="root"></div>
 
-    <!-- Load Tailwind and JS at the end to prevent blocking -->
+    <!-- Non-critical analytics moved below content -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9D1555KPF2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-9D1555KPF2');
+    </script>
+
+    <!-- Heavy scripts moved to bottom to prevent render-blocking -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
