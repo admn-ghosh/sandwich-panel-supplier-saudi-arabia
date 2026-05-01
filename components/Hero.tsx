@@ -68,13 +68,21 @@ const Hero: React.FC = () => {
         }
       }
 
+            // STEP 3: GA4 event with enhanced conversion data for Google Ads
       if (typeof (window as any).gtag === 'function') {
+        // Send user-provided data for Enhanced Conversions
+        (window as any).gtag('set', 'user_data', {
+          email: formData.email,
+          phone_number: formData.mobile,
+        });
+        // Fire the generate_lead event
         (window as any).gtag('event', 'generate_lead', {
-          'event_category': 'engagement',
-          'event_label': 'Hero Form Submit'
+          event_category: 'engagement',
+          event_label: 'Hero Form Submit',
+          value: 50,
+          currency: 'SAR',
         });
       }
-
       setIsSubmitting(false);
       setSubmitted(true);
       setTimeout(() => {
