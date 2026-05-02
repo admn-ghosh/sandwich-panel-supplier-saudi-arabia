@@ -83,6 +83,9 @@ const HeroAr: React.FC = () => {
           currency: 'SAR',
         });
       }
+      setSubmitted(true);
+      setTimeout(() => {
+        window.location.href = 'https://ghoshgroups.com/thank-you/';
       }, 3000);
 
     } catch (error) {
