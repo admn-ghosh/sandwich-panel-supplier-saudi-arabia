@@ -7,7 +7,6 @@ const FeaturesAr = lazy(() => import('./ar/Features'));
 const CertificationsAr = lazy(() => import('./ar/Certifications'));
 const ProductSectionAr = lazy(() => import('./ar/ProductSection'));
 const ProjectsDeliveryAr = lazy(() => import('./ar/ProjectsDelivery'));
-const TestimonialsAr = lazy(() => import('./ar/Testimonials'));
 const FAQAr = lazy(() => import('./ar/FAQ'));
 const FooterAr = lazy(() => import('./ar/Footer'));
 const StickyCTAAr = lazy(() => import('./ar/StickyCTA'));
@@ -30,7 +29,6 @@ function AppAr() {
           <CertificationsAr />
           <ProductSectionAr />
           <ProjectsDeliveryAr />
-          <TestimonialsAr />
           <FAQAr />
         </Suspense>
       </main>

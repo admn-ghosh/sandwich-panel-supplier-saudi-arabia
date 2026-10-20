@@ -12,9 +12,9 @@ const ProjectGalleryAr: React.FC = () => {
     <section id="our-work" className="py-16 bg-white scroll-mt-20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-10">
-          <h2 className="text-2xl md:text-3xl font-bold text-emerald-900 mb-4">أعمالنا في الخليج - توريدات رائدة</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-emerald-900 mb-4">أنواع الألواح وأمثلة الاستخدام</h2>
           <p className="text-lg text-stone-700 max-w-4xl mx-auto leading-relaxed">
-            بصفتنا <span className="font-semibold text-emerald-800">المورد الرائد للألواح العازلة في السعودية</span> والخليج، قدمنا حلولاً موثوقة للمقاولين والمطورين في المنطقة.
+            صور توضيحية للمنتجات والاستخدامات. وتُؤكد المواصفات النهائية في عرض السعر والوثائق الفنية.
           </p>
         </div>
 

@@ -10,11 +10,10 @@ const TopStripAr: React.FC<TopStripArProps> = ({ onLanguageSwitch }) => {
 
   const menuItemsAr = [
     { name: 'لماذا تختارنا', id: 'why-choose-us' },
-    { name: 'أعمالنا في الخليج', id: 'our-work' },
-    { name: 'جودة معتمدة', id: 'certifications' },
+    { name: 'تطبيقات الألواح', id: 'our-work' },
+    { name: 'الاعتمادات والوثائق', id: 'certifications' },
     { name: 'منتجاتنا', id: 'products' },
     { name: 'من نحن', id: 'about-us' },
-    { name: 'قالوا عنا', id: 'testimonials' },
     { name: 'الأسئلة الشائعة', id: 'faq' },
     { name: 'اتصل بنا', id: 'lead-form' },
   ];

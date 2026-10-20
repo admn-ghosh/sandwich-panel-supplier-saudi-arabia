@@ -23,43 +23,43 @@ export const PANEL_OPTIONS: PanelTypeOption[] = [
 
 /**
  * PROJECT GALLERY DATA
- * Updated with Ghosh Group specific project images for Saudi Arabia projects.
+ * Product and application images. Captions do not represent named project references.
  */
 export const PROJECTS: ProjectItem[] = [
   {
     title: "Sandwich Roof Panel - 10cm",
-    description: "High-insulation 10cm roof panels delivered to Riyadh industrial site.",
-    alt: "Leading sandwich panel supplier in Saudi Arabia - 10cm Sandwich Roof Panel",
+    description: "Example of a 100mm insulated roof-panel configuration.",
+    alt: "100mm insulated sandwich roof panel example",
     imageSrc: "https://ghoshgroups.com/lp/saudi-arabia-sandwich-roof-panel-10cm.jpg" 
   },
   {
-    title: "Roof Sandwich Panel KSA",
-    description: "Commercial roof panel installation for logistics hub in Jeddah.",
-    alt: "Leading sandwich panel supplier in Saudi Arabia - Roof Sandwich Panel installation",
+    title: "Roof Sandwich Panel",
+    description: "Roof-panel application example for industrial and logistics buildings.",
+    alt: "Roof sandwich panel application example",
     imageSrc: "https://ghoshgroups.com/lp/roof-sandwich-panel-saudi-arabia.jpg"
   },
   {
-    title: "Rockwool Panel - KSA",
-    description: "Fire-rated Rockwool wall system for factory project in Dammam.",
-    alt: "Leading sandwich panel supplier in Saudi Arabia - Rockwool Sandwich Panel KSA",
+    title: "Rockwool Panel",
+    description: "Rockwool-core wall-panel example; ratings depend on the tested system.",
+    alt: "Rockwool core sandwich panel example",
     imageSrc: "https://ghoshgroups.com/lp/rockwool-sandwich-panel-ksa.jpg"
   },
   {
     title: "PVC Sandwich Panel",
     description: "Corrosion-resistant PVC coated panels for coastal facility projects.",
-    alt: "Leading sandwich panel supplier in Saudi Arabia - PVC Sandwich Panel Supplier",
+    alt: "PVC coated sandwich panel example",
     imageSrc: "https://ghoshgroups.com/lp/PVC-sandwich-panel-supplier-saudi-arabia.jpg"
   },
   {
     title: "Aluminum Sandwich Panel",
     description: "Lightweight aluminum-faced panels for modern commercial façades.",
-    alt: "Leading sandwich panel supplier in Saudi Arabia - Aluminum Sandwich Panel Supplier",
+    alt: "Aluminium faced sandwich panel example",
     imageSrc: "https://ghoshgroups.com/lp/aluminum-sandwich-panel-supplier-saudi-araba.jpg"
   },
   {
     title: "50mm Sandwich Panel",
     description: "Standard 50mm insulated wall panels for warehouse partitions.",
-    alt: "Leading sandwich panel supplier in Saudi Arabia - 50mm Sandwich Panel KSA",
+    alt: "50mm insulated sandwich wall panel example",
     imageSrc: "https://ghoshgroups.com/lp/50mm-sandwich-panel-saudi-arabia.jpg"
   }
 ];
@@ -83,48 +83,39 @@ export const PRODUCTS: ProductItem[] = [
   },
   {
     title: "PIR Roof Sandwich Panel",
-    description: "High‑performance roof panel with improved fire resistance compared with standard PUR systems.",
+    description: "Insulated roof-panel option; fire performance depends on the tested panel system and specification.",
     features: [
-      "Preferred for logistics warehouses, retail developments and high‑occupancy buildings in Riyadh, Jeddah and other major cities.",
-      "Helps satisfy stricter consultant specifications on fire and thermal performance."
+      "Can be considered for logistics, retail and other commercial applications.",
+      "Confirm the required fire and thermal classifications against the offered technical documents."
     ]
   },
   {
     title: "PIR Wall Sandwich Panel",
-    description: "Fire‑resistant wall panel for commercial buildings, food‑processing plants and cold stores in Saudi Arabia.",
+    description: "Insulated wall-panel option for commercial buildings, food-processing plants and cold stores.",
     features: [
       "Excellent thermal insulation supports efficient HVAC design in high ambient temperatures.",
-      "Often selected where authorities and insurers require both insulation and enhanced fire performance."
+      "Confirm authority and insurer requirements against the offered system and test documents."
     ]
   },
   {
     title: "Rockwool Roof Sandwich Panel",
-    description: "Roof panel with non‑combustible Rockwool core for projects demanding the highest level of fire safety.",
+    description: "Roof panel with a Rockwool core for applications with specified fire and acoustic requirements.",
     features: [
-      "Suitable for refineries, process plants, power facilities and other critical infrastructure across the Kingdom.",
-      "Provides thermal and acoustic insulation while supporting stringent fire‑rating requirements."
+      "May be considered for industrial and infrastructure applications, subject to the project specification.",
+      "Confirm thermal, acoustic and fire classifications using the offered technical documents."
     ]
   },
   {
     title: "Rockwool Wall Sandwich Panel",
-    description: "Fire‑rated wall panel offering maximum protection for industrial, commercial and institutional buildings.",
+    description: "Rockwool-core wall-panel option for industrial, commercial and institutional buildings.",
     features: [
-      "Ideal for fire walls, plant rooms and façades where regulations call for non‑combustible construction.",
-      "Delivers good sound reduction and stable performance under high temperatures and harsh weather."
+      "May suit fire-separation, plant-room and façade applications when supported by the specified tested system.",
+      "Confirm acoustic, thermal and weather-exposure requirements before ordering."
     ]
   }
 ];
 
-export const TESTIMONIALS: TestimonialItem[] = [
-  {
-    quote: "Ghosh Group delivered our sandwich panels on time and within specification. Technical queries were answered quickly, which helped us keep our site schedule.",
-    author: "Project Manager – Leading Contractor, Saudi Arabia (PIR roof panels, Riyadh warehouse)"
-  },
-  {
-    quote: "The team supported us with panel selection and provided all documents requested by consultants and authorities. Overall experience was professional.",
-    author: "Consultant – Industrial Project, Dammam (Rockwool wall panels)"
-  }
-];
+export const TESTIMONIALS: TestimonialItem[] = [];
 
 export const FAQS: FAQItem[] = [
   {
@@ -133,26 +124,26 @@ export const FAQS: FAQItem[] = [
   },
   {
     question: "What is the delivery time for NEOM or Riyadh?",
-    answer: "Delivery times vary based on quantity and panel type, but we typically dispatch standard orders rapidly from our ISO-certified facility. Our logistics team handles the transport to site."
+    answer: "Delivery time depends on the panel specification, quantity, production availability, destination and transport arrangements. The quotation will state the current estimate."
   },
   {
     question: "Do you provide technical documentation for approval?",
-    answer: "Yes, we provide datasheets, test certificates (DCD/Civil Defence compliant), and quality documentation to support consultant and authority approvals in KSA."
+    answer: "We can provide available datasheets, test documents and quality documentation for the offered panel system. The buyer and project consultant must confirm the documents required by the relevant Saudi authority."
   },
   {
     question: "What is the difference between PIR and Rockwool?",
-    answer: "PIR offers excellent thermal insulation with good fire resistance. Rockwool is non-combustible and offers the highest fire safety and acoustic performance, often required for critical infrastructure."
+    answer: "PIR and Rockwool systems have different thermal, acoustic and fire-performance characteristics. Selection must be based on the offered technical data and the project specification."
   },
   {
     question: "What are your minimum order quantities?",
-    answer: "We accommodate projects of all sizes, from small renovations to large industrial facilities. There are no minimum order quantities. Contact our KSA projects desk for volume pricing on large orders."
+    answer: "Minimum quantities depend on the panel type, specification, production run and delivery destination. Send the required quantity to our KSA projects desk for confirmation."
   },
   {
     question: "Do you provide warranties on your sandwich panels?",
-    answer: "Yes, all our sandwich panels come with a 10-year manufacturing warranty covering defects in materials and workmanship. We also provide technical support throughout the panel lifecycle. Terms and conditions apply."
+    answer: "Warranty coverage, if offered, is stated in the written quotation or order documents and depends on the selected product and agreed terms."
   },
   {
     question: "Can you supply panels to remote Saudi locations like NEOM and Al-Ula?",
-    answer: "Absolutely. We have established logistics networks throughout Saudi Arabia, including remote development areas like NEOM, Al-Ula, and other Vision 2030 project sites. We ensure timely delivery with proper documentation and handling."
+    answer: "We can assess delivery requests for Saudi destinations, including remote locations. Feasibility, transport method, cost and timing are confirmed in the quotation."
   }
 ];

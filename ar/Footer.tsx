@@ -16,10 +16,13 @@ const FooterAr: React.FC = () => {
           </p>
         </div>
         <p className="max-w-xl mx-auto text-sm text-emerald-300 border-t border-emerald-900 pt-8 mt-8">
-          التوريد إلى: نيوم، الرياض، جدة، الدمام، الخبر والمدن السعودية الأخرى
+          اطلب شروط التسليم إلى الرياض وجدة والدمام والخبر ووجهات سعودية أخرى
         </p>
         <div className="mt-4 text-sm text-emerald-400 font-bold">
            &copy; {new Date().getFullYear()} مجموعة غوش. جميع الحقوق محفوظة.
+        </div>
+        <div className="mt-3 text-sm">
+          <a className="text-emerald-200 underline hover:text-white" href="https://ghoshgroups.com/privacy-policy/" target="_blank" rel="noreferrer">سياسة الخصوصية</a>
         </div>
       </div>
     </footer>

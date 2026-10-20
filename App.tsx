@@ -14,14 +14,12 @@ const Features = lazy(() => import('./components/Features'));
 const Certifications = lazy(() => import('./components/Certifications'));
 const ProductSection = lazy(() => import('./components/ProductSection'));
 const ProjectsDelivery = lazy(() => import('./components/ProjectsDelivery'));
-const Testimonials = lazy(() => import('./components/Testimonials'));
 const FAQ = lazy(() => import('./components/FAQ'));
 
 const FeaturesAr = lazy(() => import('./ar/Features'));
 const CertificationsAr = lazy(() => import('./ar/Certifications'));
 const ProductSectionAr = lazy(() => import('./ar/ProductSection'));
 const ProjectsDeliveryAr = lazy(() => import('./ar/ProjectsDelivery'));
-const TestimonialsAr = lazy(() => import('./ar/Testimonials'));
 const FAQAr = lazy(() => import('./ar/FAQ'));
 const FooterAr = lazy(() => import('./ar/Footer'));
 const StickyCTAAr = lazy(() => import('./ar/StickyCTA'));
@@ -45,9 +43,9 @@ function App({ initialLanguage = 'en' }: AppProps) {
     document.documentElement.lang = lang;
     
     if (lang === 'ar') {
-      document.title = "مورد رائد للألواح العازلة في السعودية | مجموعة غوش";
+      document.title = "ألواح عازلة للمشاريع في السعودية | مجموعة غوش";
     } else {
-      document.title = "Leading Sandwich Panels Supplier in Saudi Arabia | Ghosh Group";
+      document.title = "Sandwich Panels for Saudi Arabia | Ghosh Group";
     }
 
     try {
@@ -79,7 +77,6 @@ function App({ initialLanguage = 'en' }: AppProps) {
             <CertificationsAr />
             <ProductSectionAr />
             <ProjectsDeliveryAr />
-            <TestimonialsAr />
             <FAQAr />
           </Suspense>
         </main>
@@ -100,7 +97,6 @@ function App({ initialLanguage = 'en' }: AppProps) {
           <Certifications />
           <ProductSection />
           <ProjectsDelivery />
-          <Testimonials />
           <FAQ />
         </Suspense>
       </main>

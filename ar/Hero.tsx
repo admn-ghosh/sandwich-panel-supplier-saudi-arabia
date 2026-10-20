@@ -104,13 +104,13 @@ const HeroAr: React.FC = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8 text-right">
             <h1 className="text-4xl lg:text-5xl font-bold text-emerald-900 leading-tight">
-          مجموعة غوش هي المورد الرئيسي للألواح العازلة في المملكة العربية السعودية،وتدعم المقاولين والاستشاريين في جميع أنحاء المملكة ( نيوم -الرياض -جدة -وغيرها)
+              ألواح عازلة للمشاريع في المملكة العربية السعودية، يتم توريدها من مجموعة غوش في الإمارات.
             </h1>
             <p className="text-lg text-stone-700">
-              نحن نوفر حلول تصنيع معتمدة، وندعم مشاريع البنية التحتية بألواح عازلة عالية الجودة من نوع PIR و PUR والصوف الصخري يتم توريدها في جميع أنحاء المملكة.
+              اطلب عرض سعر لألواح الأسقف والجدران من نوع PUR أو PIR أو الصوف الصخري، مع البيانات الفنية والمستندات المتاحة لمراجعة المشروع.
             </p>
             <blockquote className="border-r-4 border-emerald-600 pr-4 py-2 bg-emerald-50 rounded-l">
-              <p className="text-emerald-900 font-semibold">نخدم مشاريع رؤية المملكة من الإمارات – دعم مخصص لنيوم والرياض وجدة والمدن الرئيسية الأخرى.</p>
+              <p className="text-emerald-900 font-semibold">يتولى مكتب المشاريع في الإمارات الرد على استفسارات السعودية. ويتم تأكيد نطاق وموعد التسليم في عرض السعر.</p>
             </blockquote>
           </div>
 
@@ -169,6 +169,12 @@ const HeroAr: React.FC = () => {
                   <button type="submit" disabled={isSubmitting} className="w-full bg-emerald-800 hover:bg-emerald-700 disabled:bg-emerald-400 text-white font-bold py-4 px-6 rounded transition-all duration-200 text-lg shadow-lg">
                     {isSubmitting ? 'جاري الإرسال...' : 'احصل على عرض سعر الآن'}
                   </button>
+                  <p className="text-xs leading-relaxed text-stone-500 text-right">
+                    بإرسال هذا النموذج، فإنك توافق على استخدام مجموعة غوش لبياناتك للرد على استفسارك. راجع{' '}
+                    <a className="font-semibold text-emerald-800 underline hover:text-emerald-700" href="https://ghoshgroups.com/privacy-policy/" target="_blank" rel="noreferrer">
+                      سياسة الخصوصية
+                    </a>.
+                  </p>
                 </form>
               </>
             )}

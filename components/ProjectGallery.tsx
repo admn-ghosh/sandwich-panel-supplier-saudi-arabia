@@ -48,9 +48,9 @@ const ProjectGallery: React.FC = () => {
     <section id="our-work" className="py-16 bg-white scroll-mt-20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-10">
-          <h2 className="text-2xl md:text-3xl font-bold text-emerald-900 mb-4">Our Work Across GCC - Leading Deliveries</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-emerald-900 mb-4">Panel Types and Application Examples</h2>
           <p className="text-base md:text-lg text-stone-700 max-w-4xl mx-auto">
-            Trusted panel solutions delivered across Saudi Arabia and the GCC.
+            Illustrative product and application images. Final specifications are confirmed in the quotation and technical documents.
           </p>
         </div>
 

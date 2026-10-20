@@ -1,4 +1,8 @@
-/* Standard CSS for animations used with Tailwind CDN */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Project-specific animations */
 
 @keyframes heartbeat {
   0% { transform: scale(1); }

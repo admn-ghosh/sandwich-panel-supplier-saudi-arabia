@@ -10,11 +10,10 @@ const TopStrip: React.FC<TopStripProps> = ({ onLanguageSwitch }) => {
 
   const menuItems = [
     { name: 'Why Choose Us', id: 'why-choose-us' },
-    { name: 'Our Work Across GCC', id: 'our-work' },
+    { name: 'Panel Applications', id: 'our-work' },
     { name: 'Certified Quality', id: 'certifications' },
     { name: 'Our Products', id: 'products' },
     { name: 'About Us', id: 'about-us' },
-    { name: 'Testimonials', id: 'testimonials' },
     { name: "FAQ's", id: 'faq' },
     { name: 'Contact Us', id: 'lead-form' },
   ];

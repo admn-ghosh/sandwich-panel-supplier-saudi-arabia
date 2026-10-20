@@ -105,13 +105,13 @@ const Hero: React.FC = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
             <h1 className="text-4xl lg:text-5xl font-bold text-emerald-900 leading-tight">
-              Ghosh Group is the primary sandwich panel supplier in Saudi Arabia, supporting contractors and consultants across NEOM, Riyadh, Jeddah, and beyond.
+              Sandwich panels for projects in Saudi Arabia, supplied by Ghosh Group from the UAE.
             </h1>
             <p className="text-lg text-stone-700">
-              We provide DCD&#8209;approved manufacturing solutions, supporting infrastructure projects with high-quality PIR, PUR, and Rockwool sandwich panels delivered throughout the Kingdom.
+              Request a quotation for PUR, PIR or Rockwool roof and wall panels, with product data and available supporting documents for project review.
             </p>
             <blockquote className="border-l-4 border-emerald-600 pl-4 py-2 bg-emerald-50 rounded-r">
-              <p className="text-emerald-900 font-semibold">Serving Saudi Arabia&apos;s Vision projects from UAE &ndash; dedicated support for major KSA infrastructure.</p>
+              <p className="text-emerald-900 font-semibold">KSA enquiries are handled by our projects desk in the UAE. Delivery scope and timing are confirmed in the quotation.</p>
             </blockquote>
           </div>
 
@@ -169,6 +169,12 @@ const Hero: React.FC = () => {
                   <button type="submit" disabled={isSubmitting} className="w-full bg-emerald-800 hover:bg-emerald-700 disabled:bg-emerald-400 text-white font-bold py-4 px-6 rounded transition-all duration-200 text-lg shadow-lg">
                     {isSubmitting ? 'Processing...' : 'Get Quotation Now'}
                   </button>
+                  <p className="text-xs leading-relaxed text-stone-500">
+                    By submitting this form, you agree that Ghosh Group may use your details to respond to your enquiry. See our{' '}
+                    <a className="font-semibold text-emerald-800 underline hover:text-emerald-700" href="https://ghoshgroups.com/privacy-policy/" target="_blank" rel="noreferrer">
+                      Privacy Policy
+                    </a>.
+                  </p>
                 </form>
               </>
             )}

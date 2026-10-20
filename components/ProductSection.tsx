@@ -6,12 +6,12 @@ const ProductSection: React.FC = () => {
     <section id="products" className="py-16 bg-white scroll-mt-20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-2xl md:text-3xl font-bold text-emerald-900 mb-4">Leading Sandwich Panel Types for Saudi Projects</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-emerald-900 mb-4">Sandwich Panel Types for Saudi Projects</h2>
           <p className="text-lg text-stone-700 max-w-3xl mx-auto mb-6 leading-relaxed">
-            Choose from a complete range of roof and wall sandwich panels, each optimised for specific Saudi applications and performance needs.
+            Review available roof and wall panel options against your project application, performance requirements and supporting documents.
           </p>
           <div className="inline-block bg-amber-50 text-amber-900 px-6 py-3 rounded border border-amber-200 text-base">
-            If you are not sure which panel type suits your Saudi project, our technical team can recommend PUR, PIR or Rockwool panels based on your drawings and fire requirements.
+            If you are unsure which panel type to request, share your drawings and required classifications so our team can identify an option for quotation and consultant review.
           </div>
         </div>
 

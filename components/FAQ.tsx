@@ -12,7 +12,7 @@ const FAQ: React.FC = () => {
   return (
     <section id="faq" className="py-12 bg-stone-50 scroll-mt-20">
       <div className="container mx-auto px-4 max-w-3xl">
-        <h2 className="text-2xl md:text-3xl font-bold text-center text-emerald-900 mb-8">Frequently Asked Questions - Leading Supplier Support</h2>
+        <h2 className="text-2xl md:text-3xl font-bold text-center text-emerald-900 mb-8">Frequently Asked Questions</h2>
         
         <div className="space-y-4">
           {FAQS.map((faq, idx) => (

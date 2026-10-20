@@ -7,7 +7,7 @@ const FAQAr: React.FC = () => {
   return (
     <section id="faq" className="py-12 bg-stone-50 scroll-mt-20">
       <div className="container mx-auto px-4 max-w-3xl">
-        <h2 className="text-2xl md:text-3xl font-bold text-center text-emerald-900 mb-8">الأسئلة الشائعة - دعم المورد الرائد</h2>
+        <h2 className="text-2xl md:text-3xl font-bold text-center text-emerald-900 mb-8">الأسئلة الشائعة</h2>
         <div className="space-y-4">
           {FAQS_AR.map((faq, idx) => (
             <div key={idx} className="bg-white rounded border border-stone-200 overflow-hidden">
