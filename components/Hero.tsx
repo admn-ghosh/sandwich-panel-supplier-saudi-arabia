@@ -28,22 +28,35 @@ const Hero: React.FC = () => {
     setIsSubmitting(true);
 
     try {
-      if (db) {
-        // STEP 1: Save lead to ksa-leads (primary — must succeed)
-        await addDoc(collection(db, 'ksa-leads'), {
-          leadData: formData,
-          submittedAt: serverTimestamp(),
-          language: 'English',
-          source: window.location.hostname
-        });
+      if (!db) {
+        throw new Error('Lead database is unavailable.');
+      }
 
-        // STEP 2: Trigger email notification via mail collection (secondary — failure does NOT block lead)
-        try {
-          await addDoc(collection(db, 'mail'), {
-            from: 'admin@ghoshgroups.com',
-            to: ['parimal@ghoshgroups.com'],
-            cc: ['admin@ghoshgroups.com'],
-            message: {
+      // STEP 1: Save lead to ksa-leads (primary — must succeed)
+      const leadDocument = await addDoc(collection(db, 'ksa-leads'), {
+        leadData: formData,
+        submittedAt: serverTimestamp(),
+        language: 'English',
+        source: window.location.hostname
+      });
+
+      // STEP 2: Notify GTM only after Firestore accepted the lead. No PII enters the data layer.
+      (window as any).dataLayer = (window as any).dataLayer || [];
+      (window as any).dataLayer.push({
+        event: 'ksa_quote_form_success',
+        form_id: 'ksa-sandwich-panel-quote',
+        form_language: 'en',
+        submission_id: leadDocument.id,
+        lead_source: 'ksa_landing_page'
+      });
+
+      // STEP 3: Trigger email notification via mail collection (secondary — failure does NOT block lead)
+      try {
+        await addDoc(collection(db, 'mail'), {
+          from: 'admin@ghoshgroups.com',
+          to: ['parimal@ghoshgroups.com'],
+          cc: ['admin@ghoshgroups.com'],
+          message: {
               subject: 'New Lead from KSA Landing Page',
               html: `
                 <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
@@ -60,29 +73,13 @@ const Hero: React.FC = () => {
                   <p style="font-size: 12px; color: #999;">Submitted at: ${new Date().toLocaleString()}</p>
                 </div>
               `
-            }
-          });
-        } catch (mailError) {
-          // Email notification failed — lead is already saved, so just log and continue
-          console.warn('Email notification failed (lead was saved):', mailError);
-        }
+          }
+        });
+      } catch (mailError) {
+        // Email notification failed — lead is already saved, so just log and continue
+        console.warn('Email notification failed (lead was saved):', mailError);
       }
 
-            // STEP 3: GA4 event with enhanced conversion data for Google Ads
-      if (typeof (window as any).gtag === 'function') {
-        // Send user-provided data for Enhanced Conversions
-        (window as any).gtag('set', 'user_data', {
-          email: formData.email,
-          phone_number: formData.mobile,
-        });
-        // Fire the generate_lead event
-        (window as any).gtag('event', 'generate_lead', {
-          event_category: 'engagement',
-          event_label: 'Hero Form Submit',
-          value: 50,
-          currency: 'SAR',
-        });
-      }
       setIsSubmitting(false);
       setSubmitted(true);
       setTimeout(() => {
